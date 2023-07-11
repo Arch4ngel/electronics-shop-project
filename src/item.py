@@ -66,4 +66,7 @@ class Item:
 
     @staticmethod
     def string_to_number(num_string):
+        """
+        Возвращает число из строки
+        """
         return math.floor(float(num_string))
