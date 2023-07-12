@@ -58,8 +58,8 @@ class Item:
         Инициализация класса из CSV
         """
         cls.all = []
-        with open(os.path.dirname(os.path.abspath(__file__))
-                  + '/items.csv', newline='', encoding='WINDOWS-1251') as csvfile:
+        with open(os.path.join(os.path.dirname(__file__),
+                  'items.csv'), newline='', encoding='WINDOWS-1251') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 cls(row['name'], row['price'], row['quantity'])
