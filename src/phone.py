@@ -14,7 +14,7 @@ class Phone(Item):
     def number_of_sim(self, num):
         self._number_of_sim = num
         if num <= 0:
-            print("ValueError: Количество физических SIM-карт должно быть целым числом больше нуля")
+            raise ValueError("Количество физических SIM-карт должно быть целым числом больше нуля")
 
     def __repr__(self):
         return f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity}, {self._number_of_sim})"
