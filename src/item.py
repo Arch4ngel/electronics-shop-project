@@ -47,7 +47,7 @@ class Item:
         if isinstance(self, Item) and isinstance(other, Item):
             return int(self.quantity) + int(other.quantity)
         else:
-            raise Exception
+            raise TypeError('Данные объекты невозможно сложить')
 
     @property
     def name(self):

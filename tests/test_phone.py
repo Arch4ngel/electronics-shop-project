@@ -52,3 +52,7 @@ phone3 = Phone("Смартфон", 10000, 25, 2)
 
 def test_add():
     assert phone3 + phone2 == 45
+
+def test_sim():
+    with pytest.raises(ValueError):
+        phone3.number_of_sim = 0
